@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container } from "react-bootstrap";
+import SlickSlider from "./components/Slick/SlickSlider";
+import "./styles/style.scss";
+import advertise from "./media/add.jpg";
+import Countdown from "react-countdown";
 
 function App() {
+  // const Completionist = () => <span>You are good to go!</span>;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      {/* <PaginationTable /> */}
+
+      <SlickSlider />
+      <div>
+        <Container
+          className="my-5 clock-container"
+          style={{
+            backgroundImage: `url(${advertise})`,
+            backgroundRepeat: "no-repeat",
+            height: "220px",
+            width: "100%",
+          }}
         >
-          Learn React
-        </a>
-      </header>
+      
+        </Container>
+      </div>
     </div>
   );
 }
